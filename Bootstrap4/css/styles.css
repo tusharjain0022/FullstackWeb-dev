@@ -60,3 +60,11 @@ body{
     left: 0;
     min-height: 300px;
 }
+
+.modal-header {
+    background: #512DA8;
+}
+
+.modal-body {
+    background:  #D1C4E9;
+}

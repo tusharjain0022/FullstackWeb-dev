@@ -37,19 +37,19 @@
                 </ul>
             </div>
             <span class="navbar-text">
-                <a data-toggle="modal" data-target="#loginModal">
+                <a id="loginmodalclick">
                 <span class="fa fa-sign-in"></span> Login</a>
             </span>
         </div>
         
     </nav>
-    <div id="loginModal" class="modal fade" role="dialog">
+    <div id="loginmodal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <!-- Login Modal content-->
             <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Login </h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="modal-header ">
+                    <h4 class="modal-title ">Login </h4>
+                    <button type="button" class="close " data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -80,13 +80,13 @@
         </div>
     </div>
 
-    <div id="ReserveModal" class="modal fade" role="dialog">
+    <div id="reservemodal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <!-- Reservation Modal content-->
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header ">
                     <h4 class="modal-title">Reserve a Table</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close " data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -168,7 +168,7 @@
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
                     <a role="button" class="btn btn-block nav-link btn-warning"
-                    data-toggle="modal" data-target="#ReserveModal">Reserve Table</a>
+                   id="reservemodalclick">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -347,7 +347,16 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-   
+    <script>
+        $(document).ready(function() {
+            $('#loginmodalclick').click(function() {
+              $('#loginmodal').modal('show');
+            });
+            $('#reservemodalclick').click(function() {
+              $('#reservemodal').modal('show');
+            });
+        })
+    </script>
 
 </body>
 

@@ -1,0 +1,15 @@
+$header : #512DA8;
+$body : #D1C4E9;
+$floral-white : #FFFAF0;
+
+.modal-header {
+    background: $header;
+    color: $floral-white;
+    .close {
+        color: $floral-white;
+    }
+}
+
+.modal-body {
+    background: $body;
+}
