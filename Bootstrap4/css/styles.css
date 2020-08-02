@@ -11,9 +11,16 @@
 }
 
 .footer{
-    background-color: #D1C4E9;
+    background-color: #3B3A4A;
     margin:0px auto;
     padding: 20px 0px 20px 0px;
+    color: #ddd;
+}
+hr { display: block; 
+    width:80%;
+    overflow: hidden; 
+    border-style: inset; 
+    border-width: 1px;
 }
 .jumbotron {
     padding:70px 30px 70px 30px;
@@ -25,7 +32,7 @@
 address{
     font-size:80%;
     margin:0px;
-    color:#0f0f0f;
+    color: #ddd;
 }
 
 body{
