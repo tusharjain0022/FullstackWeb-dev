@@ -1,3 +1,14 @@
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(http://iiitranchi.ac.in/img/ic/iiitr/iiitr-logo-animated3.gif) center no-repeat #fff;
+}
 .row-header{
     margin:0px auto;
     padding:0px;

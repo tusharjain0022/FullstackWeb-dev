@@ -19,9 +19,13 @@
     padding:10px 20px 0px 20px;
 }
     </style>
+    
 </head>
 
 <body>
+    <div class="se-pre-con">
+
+    </div>
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
@@ -302,22 +306,22 @@
         </div>
     </div>
 
-    <footer class="footer">
+    <footer class="footer pb-0">
         <div class="container">
             <div class="row"> 
                 <div class="col-12 col-sm-4 offset-1 ">
                     
                     <div class="text-center ">
                         <h5>Connect with us</h5><hr>
-                        <a class=" btn text-white" href="http://"><i class="fab fa-facebook-square fa-2x"></i></a>
-                        <a class=" btn text-white" href="http://"><i class="fab fa-twitter-square fa-2x"></i></a>
-                        <a class=" btn text-white" href="http://"><i class="fab fa-linkedin-square fa-2x"></i></a>
-                        <a class=" btn text-white" href="http://"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a class=" btn text-white" href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+                        <a class=" btn text-white" href="#"><i class="fab fa-twitter-square fa-2x"></i></a>
+                        <a class=" btn text-white" href="#"><i class="fab fa-linkedin-square fa-2x"></i></a>
+                        <a class=" btn text-white" href="#"><i class="fab fa-instagram fa-2x"></i></a>
                         <a class=" btn text-white" href="mailto:iiitranchi@contact.info"><i class="fas fa-envelope fa-2x"></i></a>
                     </div>
                 </div>            
                
-                <div class="col-7 col-sm-3 offset-3 text-center ">
+                <div class="col-7 col-sm-3 offset-2 text-center ">
                     <h5>Our Address</h5><hr>
                     <address>
                         Sirkha Toli, Kali Nagar, Namkum, 
@@ -327,20 +331,35 @@
                         <br>
 		              </address>
                 </div>
-                
+            </div>
            </div>
-           <div class="row justify-content-center mt-5">  
-               <hr>           
-                <div class="col-auto ">
-                    <p>Web Team IIITRanchi © Copyright 2020 </p>
-                </div>
+           <div class="container-fluid">
+            <div class="row justify-content-center mt-5 pt-3"> 
+               
+                <div  class="col-1 ">
+                    <a id="dev" style="position: absolute;bottom: 0px; left: 0px;" class=" btn text-white " href="#"><i class="fas fa-laptop-code fa-2x"></i><span style="font-size:x-small;">Developers</span></a>
+                 </div>   
+                    
+                 <div class="col-10 text-center">
+                     <hr>
+                     <p>Web Team IIITRanchi © Copyright 2020 </p>
+                 </div>
+                 <div class="col-1">
+                    <a id="dev" style="position: absolute;bottom: 0px; right: 0px;" class=" btn text-white " href="#"><i class="fas fa-chevron-circle-up fa-2x"></i><br><span style="font-size: x-small;">Back to Top</span></a>
+
+                 </div>
+            </div>
            </div>
-        </div>
+           
+        
     </footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
     <script>
         $(document).ready(function() {
             $('#loginmodalclick').click(function() {
@@ -351,7 +370,13 @@
             });
         })
     </script>
+<script>
+    $(document).ready(function() {
+    // Animate loader off screen
+    $(".se-pre-con").fadeOut("slow");
+});
 
+</script>
 </body>
 
 </html>
