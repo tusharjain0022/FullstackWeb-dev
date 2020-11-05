@@ -22,31 +22,36 @@ class DishDetail extends Component {
           <div>
             <p>{comment.comment}</p>
             <p>
-              -- {comment.author} , {comment.date}
+              -- {comment.author} ,{" "}
+              {new Intl.DateTimeFormat("en-us", {
+                year: "numeric",
+                month: "short",
+                day: "2-digit",
+              }).format(new Date(Date.parse(comment.date)))}
             </p>
             <br></br>
           </div>
         );
       });
       return (
-        <Card>
-          <CardBody>
-            <h4>Comments</h4>
-            {comments}
-          </CardBody>
-        </Card>
+        <div>
+          <h4>Comments</h4>
+          {comments}
+        </div>
       );
     } else return <div></div>;
   }
 
   render() {
     return (
-      <div className="row">
-        <div className="col-12 col-md-5 m-1">
-          {this.renderDish(this.props.dish)}
-        </div>
-        <div className="col-12 col-md-5 m-1">
-          {this.renderComment(this.props.dish)}
+      <div className="container">
+        <div className="row">
+          <div className="col-12 col-md-5 m-1">
+            {this.renderDish(this.props.dish)}
+          </div>
+          <div className="col-12 col-md-5 m-1">
+            {this.renderComment(this.props.dish)}
+          </div>
         </div>
       </div>
     );
