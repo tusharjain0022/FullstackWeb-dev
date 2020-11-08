@@ -9,7 +9,6 @@ import {
   Label,
   Input,
   Col,
-  Row,
   FormFeedback,
 } from "reactstrap";
 class Contact extends Component {
