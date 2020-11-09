@@ -57,13 +57,13 @@ function RenderComment({ comments }) {
     </div>
   );
 }
-function handleSubmit(values) {
-  console.log("Current state is: " + JSON.stringify(values));
-  alert("Current state is " + JSON.stringify(values));
+function handleSubmit(values, addComment, dishId) {
+  addComment(dishId, values.rating, values.author, values.comment);
 }
-function CommentForm() {
+function CommentForm({ addComment, dishId }) {
   const [modal, setModal] = useState(false);
   const toggle = () => setModal(!modal);
+
   return (
     <>
       <Button outline onClick={toggle}>
@@ -72,7 +72,9 @@ function CommentForm() {
       <Modal isOpen={modal} toggle={toggle}>
         <ModalHeader toggle={toggle}>Submit Comment</ModalHeader>
         <ModalBody>
-          <LocalForm onSubmit={(values) => handleSubmit(values)}>
+          <LocalForm
+            onSubmit={(values) => handleSubmit(values, addComment, dishId)}
+          >
             <Row className="form-group">
               <Label htmlFor="rating" md={12}>
                 Rating
@@ -169,7 +171,7 @@ const DishDetail = (props) => {
         </div>
         <div className="col-12 col-md-5 m-1">
           <RenderComment comments={props.comments} />
-          <CommentForm></CommentForm>
+          <CommentForm addComment={props.addComment} dishId={props.dish.id} />
         </div>
       </div>
     </div>
