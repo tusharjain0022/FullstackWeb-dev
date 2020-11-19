@@ -19,12 +19,13 @@ import { Control, LocalForm, Errors } from "react-redux-form";
 import { required, minLength, maxLength } from "./ContactComponent";
 import { Link } from "react-router-dom";
 import { Loading } from "./LoadingComponent";
+import { baseUrl } from "../shared/baseUrl";
 
 function RenderDish({ dish }) {
   if (dish != null)
     return (
       <Card>
-        <CardImg top src={dish.image} alt={dish.name} />
+        <CardImg top src={baseUrl + dish.image} alt={dish.name} />
         <CardBody>
           <CardTitle>{dish.name}</CardTitle>
           <CardText>{dish.description}</CardText>
@@ -59,7 +60,7 @@ function RenderComment({ comments }) {
   );
 }
 function handleSubmit(values, addComment, dishId) {
-  addComment(dishId, values.rating, values.author, values.comment);
+  addComment(dishId, values.rating, values.name, values.comment);
 }
 function CommentForm({ addComment, dishId }) {
   const [modal, setModal] = useState(false);
@@ -189,7 +190,10 @@ const DishDetail = (props) => {
           </div>
           <div className="col-12 col-md-5 m-1">
             <RenderComment comments={props.comments} />
-            <CommentForm addComment={props.addComment} dishId={props.dish.id} />
+            <CommentForm
+              addComment={props.postComment}
+              dishId={props.dish.id}
+            />
           </div>
         </div>
       </div>
